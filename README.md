@@ -22,14 +22,16 @@ This is my personal repository for the course [Visual Studio Code Can Do That?](
 
 ## Course Resources
 
-- [Course Repository](https://github.com/burkeholland/workshop-vs-code-can-do-that)
-
+- [Course Repository | GitHub](https://github.com/burkeholland/workshop-vs-code-can-do-that)
 - [Course Website](https://burkeholland.gitbook.io/vs-code-can-do-that/)
+- [#FiveThings About Create React App | YouTube](https://www.youtube.com/watch?v=9t2GWFegnkQ&ab_channel=MicrosoftDeveloper)
+- [VS Code Can Do That | VSCode extension](https://marketplace.visualstudio.com/items?itemName=burkeholland.vs-code-can-do-that)
+
 
 
 ## Table of Contents
 
-- [ ] Introduction
+- [x] [Introduction](notes.md#Introduction)
 - [ ] Customizing the Editor
 - [ ] Productivity Tricks
 - [ ] Navigation & Refactoring
