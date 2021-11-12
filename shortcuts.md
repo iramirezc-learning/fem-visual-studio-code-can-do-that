@@ -2,7 +2,7 @@
 
 ## Essentials
 
-`Cmd` + `Shift` + `P` | Open the Command Pallette _(eg. install shell command)_
+`Cmd` + `Shift` + `P` | Open the Command Pallette _(e.g. install shell command)_
 
 `Cmd` + `P` | Open File Switcher _(switch between opened files)_
 
