@@ -117,7 +117,253 @@ In the `settings.json` file, add the following:
 
 ## Productivity Tricks
 
-> TODO
+**Emmet HTML Syntax**
+
+Create a new HTML document.
+
+Type:
+
+`!`
+
+Output:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+```
+
+Create a tag element. Type the name of the tag e.g. `div` and hit Tab or Enter. That will create the element with its enclosing tags.
+
+Type:
+
+`div`
+
+Output:
+
+```html
+<div></div>
+```
+
+Create an element with and id.
+
+Type:
+
+`#app`
+
+Output:
+
+```html
+<div id="app"></div>
+```
+
+Create an element with a class.
+
+Type:
+
+`.success`
+
+Output:
+
+```html
+<div class="success"></div>
+```
+
+Create an element with multiple classes.
+
+Type:
+
+`.success.centered.row`
+
+Output:
+
+```html
+<div class="success centered row"></div>
+```
+
+Create nested elements.
+
+Type:
+
+`div>div`
+
+Output:
+
+```html
+<div>
+  <div></div>
+</div>
+```
+
+Nested elements can also have classes or ids.
+
+Type:
+
+`#container>.section`
+
+Output:
+
+```html
+<div id="container">
+  <div class="section"></div>
+</div>
+```
+
+Create multiple elements of the same kind.
+
+Type:
+
+`ul>li*3`
+
+Output:
+
+```html
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+```
+
+Multiple elements with classes and ids. **Notice:** how Emmet is "aware" of what elements need to be created inside the `ul` element.
+
+Type:
+
+`ul#menu>.item*3`
+
+Output:
+
+```html
+<ul id="menu">
+  <li class="item"></li>
+  <li class="item"></li>
+  <li class="item"></li>
+</ul>
+```
+
+Create sibling elements.
+
+Type:
+
+`.section-1+.section-2`
+
+Output:
+
+```html
+<div class="section-1"></div>
+<div class="section-2"></div>
+```
+
+Create complex HTML structures by grouping with parentheses `()`. **Note:** You may need to press `Ctrl` + `Space Bar` to run Emmet.
+
+Type:
+
+`.container>(.section-1>a)+(.section-2>img)`
+
+Output:
+
+```html
+<div class="container">
+  <div class="section-1"><a href=""></a></div>
+  <div class="section-2"><img src="" alt=""></div>
+</div>
+```
+
+**Emmet CSS Syntax**
+
+Autocomplete any CSS properties by typing the letters.
+
+Type:
+
+`h`
+
+Output:
+
+```css
+height: ;
+```
+Type:
+
+`h100`
+
+Output:
+
+```css
+height: 100px;
+```
+
+Type:
+
+`h100p`
+
+Output:
+
+```css
+height: 100%;
+```
+
+Type:
+
+`bgi`
+
+Output:
+
+```css
+background-image: url();
+```
+
+**Emmet Commands**
+
+* **Balance (outward).** Selects elements from start to end to an outer level. 
+  * Suggested shortcut: `Ctrl` + `Shift` + 🔼
+* **Balance (inward).** Selects elements from start to end to an inner level.
+  * Suggested shortcut: `Ctrl` + `Shift` + 🔽
+* **Update Tag.** Useful to rename both the opening and enclosing tags.
+* **Go to Matching Pair.** Takes you to the enclosing tag of the selected element.
+* **Update Image Size.** Autocompletes the `height` and `width` of an `img` element using the resolution of the source image. This also works for CSS adding the corresponding props.
+* **Wrap with Abbreviation.** Wraps the selection with the given Emmet abbreviation.
+  * Suggested shortcut: `Ctrl` + `Shift` + `W`
+
+**Prettier**
+
+* Format On Save.
+  * `"editor.formatOnSave": true`
+
+**NPM & Intellisense**
+
+- [x] Enable NPM Scripts Explorer. Go to the **View** menu > Select "Open View..." > Type "npm" > Select "NPM Scripts" > Press Enter
+- [x] Try the `npm run` command in the terminal to show the scripts available
+- [x] Install the extension [Version Lens](https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens)
+
+**React Snippets**
+
+- [x] Install [Simple React Snippets](https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets) extension
+
+Try it out.
+
+Type:
+
+`imr`
+
+Output:
+
+```js
+import React from 'react';
+```
+
+**VSCode Reload**
+
+  * Press `Cmd` + `R`. For some reason does not work. What's `isDevelopment`?
+  * Open the Command Pallette > Type "reload" > Select "Developer: Reload Window"
 
 ## Navigation & Refactoring
 

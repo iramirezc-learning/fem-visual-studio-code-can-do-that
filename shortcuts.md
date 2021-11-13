@@ -2,14 +2,20 @@
 
 ## Essentials
 
-`Cmd` + `Shift` + `P` | Open the Command Pallette _(e.g. install shell command)_
+* `Cmd` + `Shift` + `P` | Open the Command Pallette _(e.g. install shell command)_
+* `Cmd` + `P` | Open File Switcher _(switch between opened files)_
+* `Cmd` + `B` | Toggle the Sidebar _(when editing an md file, this shortcut makes text bold)_
+* `Ctrl` + <code>\`</code> _(backtick)_ | Toggle the Terminal
+* `Cmd` + `,` | Open VSCode Settings
+* `Cmd` + `J` | Toggle the bottom panel _(Problems, Output, Debug Console, Terminal)_
 
-`Cmd` + `P` | Open File Switcher _(switch between opened files)_
+## Essential Navigation
 
-`Cmd` + `B` | Toggle the Sidebar _(when editing an md file, this shortcut makes text bold)_
+* `Cmd` + `P` + `P` | Go to previous file
+* `Cmd` + `0` | Set focus to Sidebar
+* `Cmd` + `1` | Set focus to Editor. _(If multiple editors are open, try with `2`, `3`, and so on)_
+* `Cmd` + `Shift` + `E` | Open Explorer View
+* `Cmd` + `Shift` + `D` | Open Debug View
+* `Ctrl` + `Shift` + `G` | Open Source Control View
+* `Cmd` + `Shift` + `X` | Open Extensions View
 
-`Ctrl` + <code>\`</code> _(backtick)_ | Toggle the Terminal
-
-`Cmd` + `,` | Open VSCode Settings
-
-`Cmd` + `J` | Toggle the bottom panel _(Problems, Output, Debug Console, Terminal)_
