@@ -26,20 +26,19 @@ This is my personal repository for the course [Visual Studio Code Can Do That?](
 - [Course Website](https://burkeholland.gitbook.io/vs-code-can-do-that/)
 - [#FiveThings About Create React App | YouTube](https://www.youtube.com/watch?v=9t2GWFegnkQ&ab_channel=MicrosoftDeveloper)
 - [VS Code Can Do That | VSCode extension](https://marketplace.visualstudio.com/items?itemName=burkeholland.vs-code-can-do-that)
-
-
+- [Bulma CSS Framework](https://bulma.io/)
 
 ## Table of Contents
 
 - [x] [Introduction](notes.md#Introduction)
-- [ ] Customizing the Editor
-- [ ] Productivity Tricks
-- [ ] Navigation & Refactoring
-- [ ] Debugging
-- [ ] Docker
-- [ ] Remote Development
-- [ ] Working with Data
-- [ ] Git
+- [x] [Customizing the Editor](notes.md#Customizing-the-Editor)
+- [x] [Productivity Tricks](notes.md#Productivity-Tricks)
+- [ ] [Navigation & Refactoring](notes.md#Navigation-&-Refactoring)
+- [ ] [Debugging](notes.md#Debugging)
+- [ ] [Docker](notes.md#Docker)
+- [ ] [Remote Development](notes.md#Remote-Development)
+- [ ] [Working with Data](notes.md#Working-with-Data)
+- [ ] [Git](notes.md#Git)
 
 
 
