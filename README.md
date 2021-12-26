@@ -33,7 +33,7 @@ This is my personal repository for the course [Visual Studio Code Can Do That?](
 - [x] [Introduction](notes.md#Introduction)
 - [x] [Customizing the Editor](notes.md#Customizing-the-Editor)
 - [x] [Productivity Tricks](notes.md#Productivity-Tricks)
-- [ ] [Navigation & Refactoring](notes.md#Navigation-&-Refactoring)
+- [x] [Navigation & Refactoring](notes.md#Navigation-&-Refactoring)
 - [ ] [Debugging](notes.md#Debugging)
 - [ ] [Docker](notes.md#Docker)
 - [ ] [Remote Development](notes.md#Remote-Development)

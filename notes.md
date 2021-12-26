@@ -367,7 +367,112 @@ import React from 'react';
 
 ## Navigation & Refactoring
 
-> TODO
+**Move lines**
+
+You can move lines by pressing `Option (⌥)` + 🔼 or 🔽
+
+**Duplicate lines**
+
+You can duplicate lines by pressing `Shift (⇧)` + `Option ⌥` + 🔼 or 🔽
+
+**Delete lines**
+
+You can delete lines by pressing `Shift (⇧)` + `Cmd (⌘)` + `K`
+
+**Comment Code**
+
+You can comment code by pressing `Shift (⇧)` + `Cmd (⌘)` + `/`
+
+**Fold Code**
+
+1. Open the Command Pallet `Cmd (⌘)` + `Shift (⇧)` + `P`
+2. Type "fold"
+3. Select "Fold"
+
+**Create Regions**
+
+Regions are a way to fold big blocks of code or lines by comments.
+
+Write a comment like this `#region <insert some fancy description here>` before the code you want to fold.
+
+Then, write a comment like this `#endregion` at the end.
+
+Example:
+
+```js
+//#region A very long code
+function veryBigProcess() {
+  // assume I am a very big function 🤦🏻‍♂️
+}
+//#endregion
+```
+
+This also works with HTML comments:
+
+```html
+<!--#region who wrote this piece of crap? -->
+<div class="container">
+  <!-- assume this is a very long div 😜 -->
+</div>
+<!--#endregion -->
+```
+
+Finally, fold the code 😉.
+
+**Multiple cursors**
+
+* You can select all instances of any selection by pressing `Cmd (⌘)` + `Shift (⇧)` + `L`.
+* You can select instance one by one by pressing `Cmd (⌘)` + `D` and deselecting with `K` while holding `Cmd (⌘)` and then pressing `D` again.
+
+
+**Finding**
+
+* Open the Find box with `Cmd (⌘)` + `F`.
+* Open the Find & Replace box with `Option ⌥` + `Cmd (⌘)` + `F`.
+* While finding, press `Option ⌥` + `Enter` and that will add a cursor to all the results. Then navigate with `Option ⌥` or `Cmd (⌘)` and the arrows `<-` or `->`.
+
+**Search by symbols**
+
+Open the search bar with `Cmd (⌘)` + `P`.
+
+* Type `@` that will list all the symbols in the file.
+* Type `@:` that will list all the symbols by type:
+  * In a file with code will list `classes`, `constructors` or `methods`.
+  * In a file with HTML will list CSS `classes` and `fields`.
+* Type `:<n>` that will take to line of code `<n>`. Example: `:30`.
+* Type: `:<n>,<col>` that will take you to line of code `<n>` and column `<col>`. Example: `:30,10`.
+
+**Name Refactor**
+
+1. Select a symbol to be changed, press `F2` and then enter the new name, press `Enter` and all instances should have changed.
+   1. Alternatively hit `Shift` + `Enter` to see a preview of the refactor.
+2. Confirm that the symbol was changed in all files pressing `F12`.
+
+**Extract Method**
+
+1. Select any code, press `Cmd` + `.` to open the 💡 options, then select any of the extract options:
+   a. Extract to method in class...
+   b. Extract to function in module scope.
+
+**TypeScript checks**
+
+Option A. At the top of a file add:
+
+```js
+// @ts-check
+```
+
+That will enable VS code to check your JS as if it were TS.
+
+Option B. Turn the setting on for all files in the workspace.
+
+In the `settings.json` file, add the following:
+
+```json
+"js/ts.implicitProjectConfig.checkJs": true
+```
+
+That will enable the TS checking for all the workspace.
 
 ## Debugging
 
