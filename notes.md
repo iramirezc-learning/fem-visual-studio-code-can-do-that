@@ -476,7 +476,188 @@ That will enable the TS checking for all the workspace.
 
 ## Debugging
 
-> TODO
+**Breakpoints**
+
+There are different ways of adding breakpoints:
+
+* A regular Breakpoint
+* A Conditional Breakpoint
+  * By an Expression. e.g. `pokemon.name === 'pikachu'`
+  * By a Hit Count. e.g. `allPokemon.length > 10`
+* A Logpoint. e.g. `Current pokemon is: {pokemon}`
+
+
+**TypeScript debugging**
+
+1. Install `npm i -g typescript`
+2. Install `npm i -D @types/node`
+3. Create `index.ts` file
+4. From the "Terminal" menu select "Run Build Task.."
+5. Select `tsc: build`
+6. JS and map files will be created
+7. Create a `.vscode/settings.json` file
+8. Ignore the JS and map files from the editor by adding the following:
+
+```json
+{
+  "files.exclude": {
+    "**/{*.js,*.js.map}": true
+  }
+}
+```
+9. Create a `.vscode/launch.json` file with the following:
+```json
+{
+  "configurations": [
+    {
+      "name": "Launch CLI",
+      "program": "${workspaceFolder}/index.js",
+      "request": "launch",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "pwa-node",
+      "console": "integratedTerminal"
+    }
+  ]
+}
+```
+10. Add a breakpoint to the `.ts` file
+11. Run the "Launch CLI" from the Debug panel
+12. Breakpoint should work in the `.ts` file even that the process is running from the `.js` file.
+
+**Toggle Auto Attach**
+
+1. Open the Command Pallet
+2. Search for "Toggle Auto Attach"
+3. Select "Only With Flag"
+5. Add a breaking point to the scripting file. e.g. `index.js`
+6. Run the script with the `--inspect` flag. e.g. `node --inspect index.js`
+7. Debugging should work in attached mode
+
+**Env vars while debugging**
+
+In the `.vscode/launch.json` file for every `configurations.[]` you can either:
+
+a. Add the property `env` that is an object with the env variables:
+
+```json
+{
+  "configurations": [
+    {
+      "name": "Launch CLI",
+      "program": "${workspaceFolder}/index.js",
+      "request": "launch",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "pwa-node",
+      "console": "integratedTerminal",
+      "env": {
+        "API_BASE": "https://pokeapi.co/api/v2"
+      }
+    }
+  ]
+}
+```
+
+b. Add the property `envFile` when you have an `.env` file.
+
+```json
+{
+  "configurations": [
+    {
+      "name": "Launch CLI",
+      "program": "${workspaceFolder}/index.js",
+      "request": "launch",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "pwa-node",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
+```
+
+**Browser debugging**
+
+1. Create a new `.vscode/launch.json` file
+2. Add the following configuration:
+
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Chrome",
+      "request": "launch",
+      "type": "pwa-chrome",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}
+```
+3. Add a breakpoint
+4. Run the debug configuration
+5. Chrome should open a new instance in debug mode
+
+**Compound debugging (Fullstack)**
+
+1. Add a launch configuration both for React (Chrome) & Server (Node.js) and use the `compounds` config:
+
+```json
+{
+  "version": "0.2.0",
+  "compounds": [
+    {
+      "name": "Launch Fullstack",
+      "configurations": ["Launch React", "Launch Server"]
+    }
+  ],
+  "configurations": [
+    {
+      "name": "Launch Server",
+      "program": "${workspaceFolder}/server/server.js",
+      "request": "launch",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "pwa-node",
+      "env": {
+        "API_BASE": "https://lifx-lamp-api.azurewebsites.net/api"
+      }
+    },
+    {
+      "type": "pwa-chrome",
+      "request": "launch",
+      "name": "Launch React",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/src"
+    }
+  ]
+}
+```
+
+**Debugging with Nodemon**
+
+1. Add the following launch configuration:
+
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "name": "Launch Server",
+      "program": "${workspaceFolder}/server/server.js",
+      "request": "launch",
+      "restart": true,
+      "runtimeExecutable": "nodemon",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "pwa-node",
+      "env": {
+        "API_BASE": "https://lifx-lamp-api.azurewebsites.net/api"
+      }
+    }
+  ]
+}
+```
 
 ## Docker
 
