@@ -4,7 +4,6 @@
 
 * [VS Code Can Do That](https://marketplace.visualstudio.com/items?itemName=burkeholland.vs-code-can-do-that)
 
-
 ## Themes
 
 * [Cobalt 2](https://marketplace.visualstudio.com/items?itemName=wesbos.theme-cobalt2)
@@ -23,7 +22,6 @@
 * [Chalice icons](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
 * [Material icons](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
 
-
 ## Appearance
 
 * [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
@@ -39,3 +37,10 @@
 * [Simple React Snippets](https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets)
 * [Version Lens](https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens)
 
+## Docker
+
+* [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
+
+## Databases
+
+* [MongoDB](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode)

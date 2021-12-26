@@ -661,7 +661,66 @@ b. Add the property `envFile` when you have an `.env` file.
 
 ## Docker
 
-> TODO
+The Docker extension offers a very good UI to inspect the containers, images, registries, networks and volumes. I have not learned anything new about it. The extension it is handy but I prefer to run the commands manually.
+
+The coolest thing is that the extension can create all the docker files you may need to get started.
+
+**Debugging within a Docker container**
+
+The extension will create a docker-compose file `docker-compose.debug.yml` file exposing the port `9229` and also it will create the `.vscode/launch.json` file in order to run the debug.
+
+1. Just run the created launched configuration "Docker Node.js Launch" and that will spin up a container in debug mode.
+
+The `launch.json` configuration file looks as follows:
+
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Docker Node.js Launch",
+      "type": "docker",
+      "request": "launch",
+      "preLaunchTask": "docker-run: debug",
+      "platform": "node"
+    }
+  ]
+}
+```
+
+The `docker-compose.debug.yml` file:
+
+```yml
+version: '3.4'
+
+services:
+  expressreactstarter:
+    image: expressreactstarter
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000
+      - 9229:9229
+    command: ["node", "--inspect=0.0.0.0:9229", "./server.js"]
+```
+
+The `Dockerfile`:
+
+```Dockerfile
+FROM node:lts-alpine
+ENV NODE_ENV=production
+WORKDIR /usr/src/app
+COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
+RUN npm install --production --silent && mv node_modules ../
+COPY . .
+EXPOSE 3000
+RUN chown -R node /usr/src/app
+USER node
+CMD ["npm", "start"]
+```
 
 ## Remote Development
 
