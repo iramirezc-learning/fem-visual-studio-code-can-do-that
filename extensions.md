@@ -44,3 +44,9 @@
 ## Databases
 
 * [MongoDB](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode)
+
+## Remote
+
+* [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
+* [Remote - Container](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers&WT.mc_id=freecodecamp-blog-buhollan)
+* [Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)

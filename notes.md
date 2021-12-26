@@ -724,7 +724,25 @@ CMD ["npm", "start"]
 
 ## Remote Development
 
-> TODO
+There are three "flavors" of remote development:
+
+* SSH
+* Containers
+* WSL
+
+What's interesting about this section is that you can develop inside a Docker container using the Remote - Container extension. There a few steps to do it:
+
+1. Open the Command Palette
+2. Run "Remote-Containers: Add Development Container Configuration Files..."
+3. It will request for a "container configuration definition"
+4. Choose any of the definitions, (Node.js, Python, Java, etc)
+5. A folder `.devcontainer` will be created with a `Dockerfile` and a `devcontainer.json` files.
+6. Then, from the bottom left corner there's an icon like `><` for Remote options, select "Reopen in Container".
+7. That will create a docker image an a container and attach it to the VS Code instance, meaning that you can be developing as if you were in your localhost but inside a container.
+
+NOTE: I couldn't debug the `exercise-6` app because it was requiring a set of debugging tools for Azure installed in my local, even though I installed them (maybe I should install them inside the container and not my localhost) it didn't work, but the container run correctly.
+
+VSCode extensions can be installed inside containers and they will be save in the `devcontainer.json` file.
 
 ## Working with Data
 
