@@ -8,7 +8,7 @@ let currentColor = document.getElementById("currentColor");
 let bulb = document.getElementById("bulb");
 let online = window.navigator.onLine;
 
-class App {
+class Application {
   /**
    * Initalize the page and websocket connection
    */
@@ -35,14 +35,18 @@ class App {
       .build();
 
     // receives the "colorChanged" web socket event
-    connection.on("colorChanged", hex => {
+    connection.on("colorChanged", (hex) => {
       // update the bulb color
-      bulb.style = `fill: #${hex};`;
-      currentColor.textContent = `#${hex}`;
+      this.updateColor(hex);
     });
 
     // start the websocket connection
     await connection.start();
+  }
+
+  updateColor(hex) {
+    bulb.style = `fill: #${hex};`;
+    currentColor.textContent = `#${hex}`;
   }
 
   /**
@@ -62,4 +66,4 @@ class App {
   }
 }
 
-let application = new App();
+export default Application;
