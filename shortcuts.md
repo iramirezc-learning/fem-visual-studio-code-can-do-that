@@ -37,3 +37,8 @@
 * `F2` | Rename a symbol and all its instances
 * `Shift` + `F12` | Search for all references of a symbol
 * `Cmd` + `.` | When there's a lightbulb 💡 this shortcut will open the options
+
+## Command Line
+
+* `Cmd` + `K` | Clears the console
+* `Ctrl` + `U` | Clears the line

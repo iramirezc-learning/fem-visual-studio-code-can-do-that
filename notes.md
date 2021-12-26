@@ -746,7 +746,9 @@ VSCode extensions can be installed inside containers and they will be save in th
 
 ## Working with Data
 
-> TODO
+The author uses an [Azure extension](https://marketplace.visualstudio.com/items?itemName=cosmoconsult.cosmo-azure-devops) to connect to MongoDB, MySQL and Sqlite. I didn't want to install that extension (because requires sign in) but rather use different ones. The only extension that worked for me was the [MongoDB VSCode](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode). Other extensions for MySQL or Sqlite broke and were buggy.
+
+Using the MongoDB is quite simple, just need to add a new connection and then create a script to run MongoDB queries as if you were in the shell.
 
 ## Git
 
