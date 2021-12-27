@@ -2,7 +2,6 @@
 
 This is my personal repository for the course [Visual Studio Code Can Do That?](https://frontendmasters.com/courses/customize-vs-code/).
 
-> 🚧 Learning in Progress
 
 ## Course Details
 
@@ -16,9 +15,9 @@ This is my personal repository for the course [Visual Studio Code Can Do That?](
 
 🏁 **Started On:** Nov 11, 2021
 
-✅ **Completed On:** ???
+✅ **Completed On:** Dec 26, 2021
 
-🍅 **Total Pomodoro Time:** ???
+🍅 **Total Pomodoro Time:** ~19 hours, 30 minutes
 
 ## Course Resources
 
