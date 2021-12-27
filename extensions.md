@@ -50,3 +50,12 @@
 ## Databases
 
 * [MongoDB](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode)
+
+## Git & GitHub
+
+* [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
+* [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+
+## Settings Sync
+
+* [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)

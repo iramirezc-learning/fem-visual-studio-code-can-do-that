@@ -11,7 +11,7 @@
 ✔️ **Tasks**
 
 - [ ] 👀 Watch YouTube video [#FiveThings About Create React App](https://www.youtube.com/watch?v=9t2GWFegnkQ&ab_channel=MicrosoftDeveloper)
-- [ ] 🤔 What's [GitBook](https://www.gitbook.com/)?
+- [x] 🤔 What's [GitBook](https://www.gitbook.com/)?
 
 ## Customizing the Editor
 
@@ -740,7 +740,7 @@ What's interesting about this section is that you can develop inside a Docker co
 6. Then, from the bottom left corner there's an icon like `><` for Remote options, select "Reopen in Container".
 7. That will create a docker image an a container and attach it to the VS Code instance, meaning that you can be developing as if you were in your localhost but inside a container.
 
-NOTE: I couldn't debug the `exercise-6` app because it was requiring a set of debugging tools for Azure installed in my local, even though I installed them (maybe I should install them inside the container and not my localhost) it didn't work, but the container run correctly.
+_**NOTE**: I couldn't debug the `exercise-6` app because it was requiring a set of debugging tools for Azure installed in my local, even though I installed them (maybe I should install them inside the container and not my localhost) it didn't work, but the container run correctly._
 
 VSCode extensions can be installed inside containers and they will be save in the `devcontainer.json` file.
 
@@ -752,4 +752,18 @@ Using the MongoDB is quite simple, just need to add a new connection and then cr
 
 ## Git
 
-> TODO
+I have learned a few new things about using Git with VSCode.
+
+* I can create, merge and delete branches.
+* I can use the Pull Request extension to see the opened PRs.
+* I can revert and see changes in a file by clicking in the colors next to the line numbers that were changed.
+* I can create and pop stashes with a name.
+* I can clone repos.
+
+## VSCode Settings
+
+Finally! What I have always wished for, a way to save all your customizations from VSCode so you can have the same exact configuration in other computer. [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync).
+
+I wonder why VSCode does not have a integrated feature to save all your settings 🤔.
+
+## The End! 🙌🏼

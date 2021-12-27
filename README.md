@@ -39,8 +39,8 @@ This is my personal repository for the course [Visual Studio Code Can Do That?](
 - [x] [Debugging](notes.md#Debugging)
 - [x] [Docker](notes.md#Docker)
 - [x] [Remote Development](notes.md#Remote-Development)
-- [ ] [Working with Data](notes.md#Working-with-Data)
-- [ ] [Git](notes.md#Git)
+- [x] [Working with Data](notes.md#Working-with-Data)
+- [x] [Git](notes.md#Git)
 
 
 
